@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">    <title>PDF Upload</title>
+</head>
+
+<body>
+    <div class="inputContainer">
+        <form class="query" action="/display" id="queryForm" method="POST" enctype="multipart/form-data">
+            <label for="question">
+                Ask a question
+            </label>
+            <input type="text" name="text" id="question">
+            <input type="submit" name="action1" value="Send" id="sendBtn">
+        </form>
+
+        <form class="query" action="/upload" id="pdfForm" method="POST" enctype="multipart/form-data">
+            <div class="container">
+                <label id="file" for="fileInput">Choose File</label>
+                <input type="file" name="pdfFile" accept=".pdf" required id="fileInput">
+                <button type="submit" value="Submit" id="sendBtn">Upload PDF</button>
+
+            </div>
+            <span id="filename"></span>
+        </form>
+    
+    </div>
+    <div class="outputContainer">
+        {% if value %}
+            <p>{{value}}</p>
+        {% endif %}
+        
+    </div>
+    
+    <div class="outputContainer">
+        {% if result %}
+            <p>{{result}}</p>
+        {% endif %}
+    </div>
+    <script>
+
+        let inputfile = document.getElementById('fileInput');
+        let fileName = document.getElementById('filename');
+        inputfile.addEventListener('change',function(event){
+            console.log("HElllo");
+            let uploadFile = event.target.files[0].name;
+            fileName.textContent = uploadFile;
+            console.log(event.target.files);
+        })
+        // document.addEventListener('DOMContentLoaded', function () {
+        //         // Fetch data from Flask using the Fetch API
+        //         fetch('/display')
+        //             .then(response => response.json())
+        //             .then(data => {
+        //                 // Handle the data received from the server
+        //                 document.getElementById('result').innerHTML = data.message;
+        //             })
+        //             .catch(error => console.error('Error:', error));
+        //     });
+        
+    </script>
+</body>
+
+</html>

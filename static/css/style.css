@@ -1,0 +1,98 @@
+.inputContainer{
+    max-width: 1000px;
+    height: 180px;
+    margin: auto;
+    /* border: 2px solid black; */
+}
+.query{
+    max-width: 500px;
+    margin: 2rem auto;
+    /* border: 2px solid black; */
+    label{
+        display:block;
+        padding: 1rem 0 .25rem;
+        text-transform: uppercase;
+        font-size: 14px;
+    }
+    input{
+        display: block;
+        width: 100%;
+        border: 2px solid #298089;
+        padding: .5rem;
+        font-size: 18px;
+    }
+    
+}
+#sendBtn {
+    border: 0;
+    background: #343050;
+    padding: 8px;
+    color: white;
+    margin: 5px 10px 0px 0px;
+    width: auto;
+    cursor: pointer;
+}
+
+#btn {
+    border: 0;
+    background: #343050;
+    padding: 7px;
+    color: white;
+    margin:5px 0px 0px 0px;
+    width: auto;
+    cursor: pointer;
+}
+
+.container {
+    display: flex;
+    justify-content: space-start;
+    align-items: center;
+}
+
+ input[type="file"] {
+     display: none;
+ }
+
+ #file {
+    border: 0;
+    background: #343050;
+    padding: 9px;
+    color: white;
+    margin: 3px 10px 0px 0px;
+    width: auto;
+    cursor: pointer;
+     
+ }
+
+ /* Style the submit button */
+ input[type="submit"] {
+    border: 0;
+    background: #343050;
+    padding: .5rem;
+    color: white;
+    margin: 5px 0px 0px 0px;
+    width: auto;
+ }
+.outputContainer{
+    max-width: 1000px;
+    height: 600px;
+    margin: 50px 0px 0px 260px;
+    color:black;
+    padding-left: 247px;
+}
+.value{
+    font-size: 30px;
+}
+
+#result {
+    max-height: 1000px;
+    max-width: 500px;
+    /* Set a maximum height for the container */
+    overflow: auto;
+    /* Add a scrollbar if the content overflows */
+    border: 1px solid white;
+    /* Optional: Add a border for better visibility */
+    padding: 10px;
+    margin:100px 0px 0px 520px ;
+    /* Optional: Add padding for spacing */
+}
