@@ -25,7 +25,7 @@ def display_res(query,text):
     chunks = splitter.split_documents(docs)
     
     # Get Embedding Model from HF via API
-    HF_TOKEN = "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"
+    HF_TOKEN = "your-token"
 
     embeddings = HuggingFaceInferenceAPIEmbeddings(
         api_key=HF_TOKEN, model_name="BAAI/bge-base-en-v1.5"
